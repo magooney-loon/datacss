@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DataCSS Library Demo</title>
+  <title>DataCSS Library</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/demo.css">
+  <link rel="stylesheet" href="css/effects.css">
 </head>
 <body data-theme="light" data-style="flat">
   <header class="page-header">
@@ -18,229 +19,531 @@
         <a href="https://github.com/magooney-loon/datacss" target="_blank">GitHub</a>
       </div>
     </div>
-    
   </header>
   
   <div class="container">
-    <p class="text-secondary mb-4">A lightweight, powerful theming system with enhanced animations and styles</p>
-    <div class="card">
-      <h2>Theme Picker</h2>
-      <p class="text-secondary">Choose a color theme for the interface.</p>
-      <div class="theme-picker">
-        <button onclick="setTheme('light')" class="active" id="light-theme-btn">Light</button>
-        <button onclick="setTheme('dark')" id="dark-theme-btn">Dark</button>
-        <button onclick="setTheme('nightowl')" id="nightowl-theme-btn">Night Owl</button>
-        <button onclick="setTheme('terminal')" id="terminal-theme-btn">Terminal</button>
-        <button onclick="setTheme('claude')" id="claude-theme-btn">Claude</button>
-        <button onclick="setTheme('synthwave')" id="synthwave-theme-btn">Synthwave</button>
-      </div>
-      
-      <div class="divider"></div>
-      
-      <h3>Theme Color Palettes</h3>
-      <div class="color-palettes">
-        <div class="palette-group">
-          <h4>Backgrounds</h4>
-          <div class="color-swatch">
-            <div class="color-sample primary-bg" title="Primary Background"></div>
-            <div class="color-sample secondary-bg" title="Secondary Background"></div>
-            <div class="color-sample tertiary-bg" title="Tertiary Background"></div>
-          </div>
-        </div>
-        
-        <div class="palette-group">
-          <h4>Accents</h4>
-          <div class="color-swatch">
-            <div class="color-sample accent-dark" title="Accent Dark"></div>
-            <div class="color-sample accent-color" title="Accent"></div>
-            <div class="color-sample accent-light" title="Accent Light"></div>
-          </div>
-        </div>
-        
-        <div class="palette-group">
-          <h4>Status</h4>
-          <div class="color-swatch">
-            <div class="color-sample success-color" title="Success"></div>
-            <div class="color-sample warning-color" title="Warning"></div>
-            <div class="color-sample error-color" title="Error"></div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="mt-4 text-center">
-        <span class="text-secondary">Active theme: </span>
-        <span class="accent-color" id="active-theme-display">light</span>
-      </div>
-    </div>
+    <h1 data-animate="fade-in">DataCSS Library</h1>
+    <p class="text-secondary mb-4" data-animate="fade-up">A lightweight, powerful theming system with enhanced animations and styles</p>
     
-    <div class="card mt-4">
-      <h2>Style Picker</h2>
-      <p class="text-secondary">Choose a visual style for the interface components.</p>
-      <div class="style-picker">
-        <button onclick="setStyle('flat')" class="active" id="flat-style-btn">Flat</button>
-        <button onclick="setStyle('material')" id="material-style-btn">Material</button>
-        <button onclick="setStyle('skeumorph')" id="skeumorph-style-btn">Skeumorph</button>
-        <button onclick="setStyle('futura')" id="futura-style-btn">Futura</button>
-        <button onclick="setStyle('neomorphic')" id="neomorphic-style-btn">Neomorphic</button>
-        <button onclick="setStyle('glitch')" id="glitch-style-btn">Glitch</button>
+    <div class="tab-container">
+      <div class="tab-buttons">
+        <div class="tab-button active" data-tab="theming">Theming</div>
+        <div class="tab-button" data-tab="styling">Styling</div>
+        <div class="tab-button" data-tab="components">Components</div>
+        <div class="tab-button" data-tab="animations">Animations</div>
+        <div class="tab-button" data-tab="attention">Attention Effects</div>
+        <div class="tab-button" data-tab="staggered">Staggered</div>
+        <div class="tab-button" data-tab="scroll">Scroll Reveal</div>
+        <div class="tab-button" data-tab="transitions">Page Transitions</div>
       </div>
       
-      <div class="divider"></div>
-      
-      <h3>Style Features</h3>
-      <div class="style-features">
-        <div class="feature">
-          <span class="feature-title">Typography</span>
-          <div>Heading weight: <span class="text-tertiary">var(--heading-font-weight)</span></div>
-          <div>Letter spacing: <span class="text-tertiary">var(--heading-letter-spacing)</span></div>
-        </div>
-        
-        <div class="feature">
-          <span class="feature-title">Shapes</span>
-          <div>Border radius: <span class="text-tertiary">var(--border-radius)</span></div>
-          <div>Border style: <span class="text-tertiary">var(--card-border-style)</span></div>
-        </div>
-        
-        <div class="feature">
-          <span class="feature-title">Effects</span>
-          <div>Box shadow: <span class="text-tertiary">var(--box-shadow)</span></div>
-          <div>Transition: <span class="text-tertiary">var(--transition-speed)</span></div>
+      <!-- Theming Tab -->
+      <div class="tab-content active" id="theming-tab">
+        <div class="card">
+          <h2>Theme Picker</h2>
+          <p class="text-secondary">Choose a color theme for the interface.</p>
+          <div class="theme-picker">
+            <button onclick="setTheme('light')" class="active" id="light-theme-btn">Light</button>
+            <button onclick="setTheme('dark')" id="dark-theme-btn">Dark</button>
+            <button onclick="setTheme('nightowl')" id="nightowl-theme-btn">Night Owl</button>
+            <button onclick="setTheme('terminal')" id="terminal-theme-btn">Terminal</button>
+            <button onclick="setTheme('claude')" id="claude-theme-btn">Claude</button>
+            <button onclick="setTheme('synthwave')" id="synthwave-theme-btn">Synthwave</button>
+          </div>
+          
+          <div class="divider"></div>
+          
+          <h3>Theme Color Palettes</h3>
+          <div class="color-palettes">
+            <div class="palette-group">
+              <h4>Backgrounds</h4>
+              <div class="color-swatch">
+                <div class="color-sample primary-bg" title="Primary Background"></div>
+                <div class="color-sample secondary-bg" title="Secondary Background"></div>
+                <div class="color-sample tertiary-bg" title="Tertiary Background"></div>
+              </div>
+            </div>
+            
+            <div class="palette-group">
+              <h4>Accents</h4>
+              <div class="color-swatch">
+                <div class="color-sample accent-dark" title="Accent Dark"></div>
+                <div class="color-sample accent-color" title="Accent"></div>
+                <div class="color-sample accent-light" title="Accent Light"></div>
+              </div>
+            </div>
+            
+            <div class="palette-group">
+              <h4>Status</h4>
+              <div class="color-swatch">
+                <div class="color-sample success-color" title="Success"></div>
+                <div class="color-sample warning-color" title="Warning"></div>
+                <div class="color-sample error-color" title="Error"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-4 text-center">
+            <span class="text-secondary">Active theme: </span>
+            <span class="accent-color" id="active-theme-display">light</span>
+          </div>
         </div>
       </div>
       
-      <div class="divider"></div>
-      
-      <h3>Animation Demo</h3>
-      <p class="text-secondary mb-2">Hover over these elements to see style-specific animations</p>
-      <div class="animation-demo">
-        <div class="hover-example">Hover Me</div>
-      </div>
+      <!-- Styling Tab -->
+      <div class="tab-content" id="styling-tab">
+        <div class="card">
+          <h2>Style Picker</h2>
+          <p class="text-secondary">Choose a visual style for the interface components.</p>
+          <div class="style-picker">
+            <button onclick="setStyle('flat')" class="active" id="flat-style-btn">Flat</button>
+            <button onclick="setStyle('material')" id="material-style-btn">Material</button>
+            <button onclick="setStyle('skeumorph')" id="skeumorph-style-btn">Skeumorph</button>
+            <button onclick="setStyle('futura')" id="futura-style-btn">Futura</button>
+            <button onclick="setStyle('neomorphic')" id="neomorphic-style-btn">Neomorphic</button>
+            <button onclick="setStyle('glitch')" id="glitch-style-btn">Glitch</button>
+          </div>
+          
+          <div class="divider"></div>
+          
+          <h3>Style Features</h3>
+          <div class="style-features">
+            <div class="feature">
+              <span class="feature-title">Typography</span>
+              <div>Heading weight: <span class="text-tertiary">var(--heading-font-weight)</span></div>
+              <div>Letter spacing: <span class="text-tertiary">var(--heading-letter-spacing)</span></div>
+            </div>
+            
+            <div class="feature">
+              <span class="feature-title">Shapes</span>
+              <div>Border radius: <span class="text-tertiary">var(--border-radius)</span></div>
+              <div>Border style: <span class="text-tertiary">var(--card-border-style)</span></div>
+            </div>
+            
+            <div class="feature">
+              <span class="feature-title">Effects</span>
+              <div>Box shadow: <span class="text-tertiary">var(--box-shadow)</span></div>
+              <div>Transition: <span class="text-tertiary">var(--transition-speed)</span></div>
+            </div>
+          </div>
+          
+          <div class="divider"></div>
+          
+          <h3>Animation Demo</h3>
+          <p class="text-secondary mb-2">Hover over these elements to see style-specific animations</p>
+          <div class="animation-demo">
+            <div class="hover-example">Hover Me</div>
+          </div>
 
-      <div class="code-example">
-        <pre><code>&lt;body data-theme="<span class="accent-color" id="code-theme">light</span>" data-style="<span class="success-color" id="code-style">flat</span>"&gt;
+          <div class="code-example">
+            <pre><code>&lt;body data-theme="<span class="accent-color" id="code-theme">light</span>" data-style="<span class="success-color" id="code-style">flat</span>"&gt;
   &lt;!-- Your content here --&gt;
 &lt;/body&gt;</code></pre>
-      </div>
-      
-      <div class="mt-4 text-center">
-        <span class="text-secondary">Active style: </span>
-        <span class="success-color" id="active-style-display">flat</span>
-      </div>
-    </div>
-    
-    <div class="sample-elements">
-      <div class="card">
-        <h3>UI Elements</h3>
-        <p class="text-secondary">This card shows various UI elements with the selected theme and style.</p>
-        
-        <div class="sample-form">
-          <label for="name">Name:</label>
-          <input type="text" id="name" placeholder="Enter your name">
+          </div>
           
-          <label for="email">Email:</label>
-          <input type="email" id="email" placeholder="Enter your email">
-          
-          <label for="message">Message:</label>
-          <textarea id="message" rows="3" placeholder="Type your message here"></textarea>
-          
-          <div class="mt-2 grid grid-cols-3 gap-2">
-            <button type="submit">Submit</button>
-            <button class="success">Success</button>
-            <button class="warning">Warning</button>
+          <div class="mt-4 text-center">
+            <span class="text-secondary">Active style: </span>
+            <span class="success-color" id="active-style-display">flat</span>
           </div>
         </div>
       </div>
       
-      <div class="card">
-        <h3>Text Elements</h3>
-        <p>This card demonstrates text styling, links and status colors.</p>
-        
-        <div class="mb-2">
-          <span class="success">Success text</span> • 
-          <span class="warning">Warning text</span> • 
-          <span class="error">Error text</span>
-        </div>
-        
-        <p class="mb-2">
-          This is a <a href="#">sample link</a> that demonstrates the hover effect. 
-          Links are styled differently based on the selected style variant.
-        </p>
-        
-        <ul>
-          <li>List items also receive style-specific treatments</li>
-          <li>Notice how the bullet style changes</li>
-          <li>The spacing is also adjusted per style</li>
-        </ul>
-        
-        <div class="mt-4">
-          <h4>Text Styles</h4>
-          <p class="text-primary">Primary text - Used for main content</p>
-          <p class="text-secondary">Secondary text - Used for descriptions and less important content</p>
-          <p class="text-tertiary">Tertiary text - Used for hints and additional information</p>
-        </div>
-      </div>
-      
-      <div class="card">
-        <h3>Status Buttons</h3>
-        <p class="text-secondary">Buttons with different status styles and hover effects.</p>
-        
-        <div class="grid grid-cols-2 gap-4 mt-4">
-          <button>Default Button</button>
-          <button class="error">Error Button</button>
-          
-          <div>
-            <hr class="divider">
-            <p class="text-tertiary text-sm mt-1">
-              Dividers also adapt to the style
-            </p>
-          </div>
-          
-          <div class="text-center">
-            <code>code element</code>
-            <p class="text-tertiary text-sm mt-1">
-              Code blocks match the theme
-            </p>
-          </div>
-          
-          <button class="success">Success Button</button>
-          <button class="warning">Warning Button</button>
-        </div>
-      </div>
-      
-      <div class="card">
-        <h3>Component Interactions</h3>
-        <p class="text-secondary">Interactive elements and how they respond to user input.</p>
-        
-        <div class="grid grid-cols-2 gap-4 mt-4">
-          <div>
-            <label for="toggle-demo">Toggle:</label>
-            <input type="checkbox" id="toggle-demo" checked>
-          </div>
-          
-          <div>
-            <label for="radio-demo">Radio:</label>
-            <div>
-              <input type="radio" id="radio1" name="radio-demo" checked>
-              <label for="radio1" class="text-sm">Option 1</label>
-            </div>
-            <div>
-              <input type="radio" id="radio2" name="radio-demo">
-              <label for="radio2" class="text-sm">Option 2</label>
+      <!-- Components Tab -->
+      <div class="tab-content" id="components-tab">
+        <div class="sample-elements">
+          <div class="card">
+            <h3>UI Elements</h3>
+            <p class="text-secondary">This card shows various UI elements with the selected theme and style.</p>
+            
+            <div class="sample-form">
+              <label for="name">Name:</label>
+              <input type="text" id="name" placeholder="Enter your name">
+              
+              <label for="email">Email:</label>
+              <input type="email" id="email" placeholder="Enter your email">
+              
+              <label for="message">Message:</label>
+              <textarea id="message" rows="3" placeholder="Type your message here"></textarea>
+              
+              <div class="mt-2 grid grid-cols-3 gap-2">
+                <button type="submit">Submit</button>
+                <button class="success">Success</button>
+                <button class="warning">Warning</button>
+              </div>
             </div>
           </div>
           
-          <div>
-            <label for="select-demo">Select:</label>
-            <select id="select-demo">
-              <option>Option 1</option>
-              <option>Option 2</option>
-              <option>Option 3</option>
-            </select>
+          <div class="card">
+            <h3>Text Elements</h3>
+            <p>This card demonstrates text styling, links and status colors.</p>
+            
+            <div class="mb-2">
+              <span class="success">Success text</span> • 
+              <span class="warning">Warning text</span> • 
+              <span class="error">Error text</span>
+            </div>
+            
+            <p class="mb-2">
+              This is a <a href="#">sample link</a> that demonstrates the hover effect. 
+              Links are styled differently based on the selected style variant.
+            </p>
+            
+            <ul>
+              <li>List items also receive style-specific treatments</li>
+              <li>Notice how the bullet style changes</li>
+              <li>The spacing is also adjusted per style</li>
+            </ul>
+            
+            <div class="mt-4">
+              <h4>Text Styles</h4>
+              <p class="text-primary">Primary text - Used for main content</p>
+              <p class="text-secondary">Secondary text - Used for descriptions and less important content</p>
+              <p class="text-tertiary">Tertiary text - Used for hints and additional information</p>
+            </div>
           </div>
           
-          <div>
-            <label for="range-demo">Range:</label>
-            <input type="range" id="range-demo" min="0" max="100" value="50">
+          <div class="card">
+            <h3>Status Buttons</h3>
+            <p class="text-secondary">Buttons with different status styles and hover effects.</p>
+            
+            <div class="grid grid-cols-2 gap-4 mt-4">
+              <button>Default Button</button>
+              <button class="error">Error Button</button>
+              
+              <div>
+                <hr class="divider">
+                <p class="text-tertiary text-sm mt-1">
+                  Dividers also adapt to the style
+                </p>
+              </div>
+              
+              <div class="text-center">
+                <code>code element</code>
+                <p class="text-tertiary text-sm mt-1">
+                  Code blocks match the theme
+                </p>
+              </div>
+              
+              <button class="success">Success Button</button>
+              <button class="warning">Warning Button</button>
+            </div>
+          </div>
+          
+          <div class="card">
+            <h3>Component Interactions</h3>
+            <p class="text-secondary">Interactive elements and how they respond to user input.</p>
+            
+            <div class="grid grid-cols-2 gap-4 mt-4">
+              <div>
+                <label for="toggle-demo">Toggle:</label>
+                <input type="checkbox" id="toggle-demo" checked>
+              </div>
+              
+              <div>
+                <label for="radio-demo">Radio:</label>
+                <div>
+                  <input type="radio" id="radio1" name="radio-demo" checked>
+                  <label for="radio1" class="text-sm">Option 1</label>
+                </div>
+                <div>
+                  <input type="radio" id="radio2" name="radio-demo">
+                  <label for="radio2" class="text-sm">Option 2</label>
+                </div>
+              </div>
+              
+              <div>
+                <label for="select-demo">Select:</label>
+                <select id="select-demo">
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+              </div>
+              
+              <div>
+                <label for="range-demo">Range:</label>
+                <input type="range" id="range-demo" min="0" max="100" value="50">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Animations Tab -->
+      <div class="tab-content" id="animations-tab">
+        <div class="demo-section">
+          <h2>Basic Animations</h2>
+          <p class="text-secondary">Click on the buttons to see different animation effects.</p>
+          
+          <div class="animation-controls">
+            <button onclick="animateBasicDemo('fade-in')">Fade In</button>
+            <button onclick="animateBasicDemo('fade-up')">Fade Up</button>
+            <button onclick="animateBasicDemo('fade-down')">Fade Down</button>
+            <button onclick="animateBasicDemo('fade-left')">Fade Left</button>
+            <button onclick="animateBasicDemo('fade-right')">Fade Right</button>
+          </div>
+          
+          <div class="animation-controls">
+            <button onclick="animateBasicDemo('fade-up-big')">Fade Up Big</button>
+            <button onclick="animateBasicDemo('fade-scale')">Fade Scale</button>
+            <button onclick="animateBasicDemo('fade-scale-up')">Fade Scale Up</button>
+            <button onclick="animateBasicDemo('fade-blur')">Fade Blur</button>
+          </div>
+          
+          <div class="demo-box" id="animation-demo-box">
+            <h3>Animation Demo</h3>
+            <p>This box will animate when you click a button above</p>
+          </div>
+          
+          <div class="example-section">
+            <h3>How to Use</h3>
+            <p>Add the <code>data-animate</code> attribute to any HTML element:</p>
+            
+            <pre><code>&lt;div data-animate="fade-in"&gt;This content will fade in&lt;/div&gt;
+&lt;p data-animate="fade-up"&gt;This paragraph will fade up&lt;/p&gt;</code></pre>
+            
+            <p>You can also apply animations with JavaScript:</p>
+            
+            <pre><code>// Get element
+const element = document.querySelector('#myElement');
+
+// Apply animation
+DataCSSEffects.animate(element, 'fade-up', {
+  delay: 0.5,    // Optional delay in seconds
+  duration: 1.2, // Optional duration in seconds
+  timing: 'ease-out'  // Optional timing function
+});</code></pre>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Attention Tab -->
+      <div class="tab-content" id="attention-tab">
+        <div class="demo-section">
+          <h2>Attention Animations</h2>
+          <p class="text-secondary">Draw attention to elements with these eye-catching animations.</p>
+          
+          <div class="animation-controls">
+            <button onclick="animateAttentionDemo('pulse')">Pulse</button>
+            <button onclick="animateAttentionDemo('bounce')">Bounce</button>
+            <button onclick="animateAttentionDemo('shake')">Shake</button>
+            <button onclick="animateAttentionDemo('flip')">Flip</button>
+            <button onclick="animateAttentionDemo('float')">Float</button>
+          </div>
+          
+          <div class="animation-controls">
+            <button onclick="animateAttentionDemo('jello')">Jello</button>
+            <button onclick="animateAttentionDemo('swing')">Swing</button>
+            <button onclick="animateAttentionDemo('heartbeat')">Heartbeat</button>
+            <button onclick="animateAttentionDemo('wobble')">Wobble</button>
+            <button onclick="animateAttentionDemo('tada')">Tada</button>
+          </div>
+          
+          <div class="demo-box" id="attention-demo-box">
+            <h3>Attention Demo</h3>
+            <p>This box will animate when you click a button above</p>
+          </div>
+          
+          <div class="example-section">
+            <h3>Timing Utility Classes</h3>
+            <p>Combine animations with timing utility classes:</p>
+            
+            <div class="timing-demo">
+              <div class="timing-item">
+                <h4>Duration Classes</h4>
+                <code>.duration-300</code> → 0.3s<br>
+                <code>.duration-500</code> → 0.5s<br>
+                <code>.duration-800</code> → 0.8s<br>
+                <button onclick="animateWithDuration('bounce', 300)">Short</button>
+                <button onclick="animateWithDuration('bounce', 800)">Long</button>
+              </div>
+              
+              <div class="timing-item">
+                <h4>Timing Functions</h4>
+                <code>.ease</code> <code>.ease-in</code> <code>.ease-out</code><br>
+                <code>.elastic</code> <code>.spring</code> <code>.linear</code><br>
+                <button onclick="animateWithTiming('bounce', 'ease-in-out')">Default</button>
+                <button onclick="animateWithTiming('bounce', 'spring')">Spring</button>
+              </div>
+            </div>
+            
+            <pre><code>&lt;div data-animate="bounce" class="duration-800 spring"&gt;
+  Bounces for 0.8s with spring easing
+&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Staggered Tab -->
+      <div class="tab-content" id="staggered-tab">
+        <div class="demo-section">
+          <h2>Staggered Animations</h2>
+          <p class="text-secondary">Elements animate one after another with increasing delays.</p>
+          
+          <div class="animation-controls">
+            <button onclick="resetStaggerDemo('fast')">Fast Stagger</button>
+            <button onclick="resetStaggerDemo('medium')">Medium Stagger</button>
+            <button onclick="resetStaggerDemo('slow')">Slow Stagger</button>
+            <button onclick="resetStaggerDemo('cascade')">Cascade</button>
+            <button onclick="resetStaggerDemo('reverse')">Reverse</button>
+            <button onclick="resetStaggerDemo('random')">Random</button>
+          </div>
+          
+          <div class="stagger-demo" id="stagger-container" data-stagger="medium">
+            <div class="stagger-item" data-animate="fade-in">Item 1</div>
+            <div class="stagger-item" data-animate="fade-in">Item 2</div>
+            <div class="stagger-item" data-animate="fade-in">Item 3</div>
+            <div class="stagger-item" data-animate="fade-in">Item 4</div>
+            <div class="stagger-item" data-animate="fade-in">Item 5</div>
+            <div class="stagger-item" data-animate="fade-in">Item 6</div>
+          </div>
+          
+          <div class="example-section">
+            <h3>How to Use</h3>
+            <p>Add <code>data-stagger</code> to the parent and <code>data-animate</code> to each child:</p>
+            
+            <pre><code>&lt;ul data-stagger="medium"&gt;
+  &lt;li data-animate="fade-in"&gt;First item&lt;/li&gt;
+  &lt;li data-animate="fade-in"&gt;Second item&lt;/li&gt;
+  &lt;li data-animate="fade-in"&gt;Third item&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+            
+            <p>Available stagger types:</p>
+            <ul>
+              <li><code>fast</code> - 0.1s between items</li>
+              <li><code>medium</code> - 0.2s between items</li>
+              <li><code>slow</code> - 0.3s between items</li>
+              <li><code>cascade</code> - increasing duration for each item</li>
+              <li><code>reverse</code> - last items animate first</li>
+              <li><code>random</code> - random delays for each item</li>
+            </ul>
+            
+            <p>Or use the JavaScript API for more control:</p>
+            
+            <pre><code>// Animate multiple elements with staggered timing
+const elements = document.querySelectorAll('.my-items');
+DataCSSEffects.animateGroup(elements, 'fade-up', {
+  startDelay: 0.2,     // Wait before starting
+  staggerDelay: 0.15,  // Delay between items
+  duration: 0.8        // Duration for each animation
+});</code></pre>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Scroll Tab -->
+      <div class="tab-content" id="scroll-tab">
+        <div class="demo-section">
+          <h2>Scroll Reveal</h2>
+          <p class="text-secondary">Elements animate when they enter the viewport as you scroll down.</p>
+          
+          <div class="scroll-demo">
+            <div class="scroll-item" data-scroll="reveal">
+              <h3>Scroll Reveal - Basic Fade</h3>
+              <p>This element fades in when you scroll to it</p>
+            </div>
+            
+            <div class="scroll-item" data-scroll="reveal-up" data-scroll-repeat>
+              <h3>Scroll Reveal - Fade Up</h3>
+              <p>This element fades up when you scroll to it</p>
+            </div>
+            
+            <div class="scroll-item" data-scroll="reveal-left">
+              <h3>Scroll Reveal - From Left</h3>
+              <p>This element slides in from the left</p>
+            </div>
+            
+            <div class="scroll-item" data-scroll="reveal-right" data-scroll-repeat>
+              <h3>Scroll Reveal - From Right</h3>
+              <p>This element slides in from the right</p>
+            </div>
+            
+            <div class="scroll-item" data-scroll="reveal-scale">
+              <h3>Scroll Reveal - Scale</h3>
+              <p>This element scales up as it fades in</p>
+            </div>
+            
+            <div class="scroll-item" data-scroll="reveal-rotate" data-scroll-repeat>
+              <h3>Scroll Reveal - Rotate</h3>
+              <p>This element rotates into position</p>
+            </div>
+          </div>
+          
+          <div class="example-section">
+            <h3>How to Use</h3>
+            <p>Add the <code>data-scroll</code> attribute to elements you want to reveal on scroll:</p>
+            
+            <pre><code>&lt;div data-scroll="reveal"&gt;Fades in when scrolled into view&lt;/div&gt;
+&lt;div data-scroll="reveal-up"&gt;Fades up when scrolled into view&lt;/div&gt;
+&lt;div data-scroll="reveal-left"&gt;Slides in from left&lt;/div&gt;
+&lt;div data-scroll="reveal-right"&gt;Slides in from right&lt;/div&gt;
+&lt;div data-scroll="reveal-scale"&gt;Scales into view&lt;/div&gt;
+&lt;div data-scroll="reveal-rotate"&gt;Rotates into position&lt;/div&gt;</code></pre>
+            
+            <p>Add the <code>data-scroll-repeat</code> attribute to make the animation replay each time the element comes into view.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Transitions Tab -->
+      <div class="tab-content" id="transitions-tab">
+        <div class="demo-section">
+          <h2>Page Transitions</h2>
+          <p class="text-secondary">Smooth transitions between views using the modern View Transition API.</p>
+          
+          <div class="animation-controls">
+            <button onclick="simulateViewTransition('fade')">Fade</button>
+            <button onclick="simulateViewTransition('zoom')">Zoom</button>
+            <button onclick="simulateViewTransition('flip')">Flip</button>
+            <button onclick="simulateViewTransition('rotate')">Rotate</button>
+          </div>
+          
+          <div class="animation-controls">
+            <button onclick="simulateViewTransition('crossfade')">Crossfade</button>
+            <button onclick="simulateOldTransition()">Legacy Transition</button>
+          </div>
+          
+          <div id="transition-container" class="demo-box">
+            <div id="transition-demo" class="transition-content">
+              <h3>View Transition Demo</h3>
+              <p>Click any button above to see smooth View Transitions API effects</p>
+              <p class="text-secondary">Modern browsers will use the View Transitions API for silky smooth transitions</p>
+            </div>
+          </div>
+          
+          <div class="example-section">
+            <h3>How to Use</h3>
+            <p>Use the modern View Transition API for seamless transitions:</p>
+            
+            <pre><code>// Using View Transition API for smooth transitions
+DataCSSEffects.viewTransition('fade', () => {
+  // Update your UI here
+  document.querySelector('#content').innerHTML = newContent;
+});</code></pre>
+            
+            <p>For multi-page (cross-document) transitions, you can use:</p>
+            
+            <pre><code>// Add this CSS to enable view transitions between pages
+@view-transition {
+  animation-duration: 0.6s;
+}
+
+// Then trigger a transition before navigation
+DataCSSEffects.viewTransition('fade', () => {
+  window.location.href = 'new-page.html';
+});</code></pre>
+            
+            <p>Available transition types:</p>
+            <ul>
+              <li><strong>Basic:</strong> <code>fade</code>, <code>zoom</code>, <code>flip</code>, <code>rotate</code></li>
+              <li><strong>Advanced:</strong> <code>crossfade</code></li>
+              <li><strong>Legacy fallback</strong> for browsers without View Transitions API support</li>
+            </ul>
+            
+            <div class="text-secondary mt-3">
+              <strong>Note:</strong> The View Transition API is supported in modern browsers.
+              DataCSS automatically falls back to traditional transitions in unsupported browsers.
+            </div>
           </div>
         </div>
       </div>
@@ -254,69 +557,7 @@
     </div>
   </footer>
 
-  <script>
-    // Enhanced theme and style switching with persisted preferences
-    function setTheme(theme) {
-      document.body.setAttribute('data-theme', theme);
-      
-      // Update active state for theme buttons
-      document.querySelectorAll('.theme-picker button').forEach(btn => {
-        btn.classList.remove('active');
-      });
-      document.getElementById(`${theme}-theme-btn`).classList.add('active');
-      
-      // Update code example and active theme display
-      document.getElementById('code-theme').textContent = theme;
-      document.getElementById('active-theme-display').textContent = theme;
-      
-      // Save preference
-      localStorage.setItem('preferred-theme', theme);
-    }
-    
-    function setStyle(style) {
-      document.body.setAttribute('data-style', style);
-      
-      // Update active state for style buttons
-      document.querySelectorAll('.style-picker button').forEach(btn => {
-        btn.classList.remove('active');
-      });
-      document.getElementById(`${style}-style-btn`).classList.add('active');
-      
-      // Update code example and active style display
-      document.getElementById('code-style').textContent = style;
-      document.getElementById('active-style-display').textContent = style;
-      
-      // Save preference
-      localStorage.setItem('preferred-style', style);
-      
-      // Special handling for glitch style - add data-text attributes for the glitch effect
-      if (style === 'glitch') {
-        document.querySelectorAll('.card, button, a').forEach(el => {
-          // For text elements, use their text content
-          if (el.textContent.trim() !== '') {
-            el.setAttribute('data-text', el.textContent);
-          }
-          // For elements with children but no direct text, use their inner HTML
-          else if (el.innerHTML.trim() !== '') {
-            el.setAttribute('data-text', el.innerHTML);
-          }
-        });
-      } else {
-        // Remove data-text attributes when not using glitch style
-        document.querySelectorAll('[data-text]').forEach(el => {
-          el.removeAttribute('data-text');
-        });
-      }
-    }
-    
-    document.addEventListener('DOMContentLoaded', function() {
-      // Initialize with saved preferences or defaults
-      const savedTheme = localStorage.getItem('preferred-theme') || 'light';
-      const savedStyle = localStorage.getItem('preferred-style') || 'flat';
-      
-      setTheme(savedTheme);
-      setStyle(savedStyle);
-    });
-  </script>
+  <script src="js/effects.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html> 

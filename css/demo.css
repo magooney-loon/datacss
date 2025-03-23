@@ -328,4 +328,229 @@ button.active {
 [data-theme="nightowl"] button,
 [data-theme="synthwave"] button {
   border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Tab container styles */
+.tab-container {
+  margin-bottom: 30px;
+}
+
+.tab-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  padding: 12px 20px;
+  background-color: var(--color-bg-secondary);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.tab-button.active {
+  background-color: var(--color-accent);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--box-shadow);
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Demo section styles from effects-demo.html */
+.demo-section {
+  margin-bottom: 60px;
+  padding: 30px;
+  border-radius: var(--border-radius);
+  background-color: var(--color-bg-secondary);
+}
+
+.demo-box {
+  background-color: var(--color-bg-tertiary);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  margin: 10px 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+.animation-controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.animation-controls button {
+  min-width: 120px;
+}
+
+.example-section {
+  padding: 20px;
+  margin: 20px 0;
+  background-color: var(--color-bg-tertiary);
+  border-radius: var(--border-radius);
+}
+
+/* Staggered animations demo */
+.stagger-demo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.stagger-item {
+  background-color: var(--color-bg-primary);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+}
+
+/* Scroll reveal demo */
+.scroll-demo {
+  height: auto;
+  position: relative;
+  padding: 20px 0;
+  overflow: visible;
+}
+
+.scroll-item {
+  padding: 30px;
+  background-color: var(--color-bg-primary);
+  margin: 30px 0;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-item[data-scroll="reveal"] {
+  transform: translateY(20px);
+}
+
+.scroll-item[data-scroll="reveal-up"] {
+  transform: translateY(40px);
+}
+
+.scroll-item[data-scroll="reveal-left"] {
+  transform: translateX(-40px);
+}
+
+.scroll-item[data-scroll="reveal-right"] {
+  transform: translateX(40px);
+}
+
+.scroll-item[data-scroll="reveal-scale"] {
+  transform: scale(0.9);
+}
+
+.scroll-item[data-scroll="reveal-rotate"] {
+  transform: rotate(-5deg) translateY(30px);
+}
+
+.scroll-item.visible {
+  opacity: 1 !important;
+  transform: translate(0) rotate(0) scale(1) !important;
+}
+
+.timing-demo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.timing-item {
+  background-color: var(--color-bg-primary);
+  padding: 15px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  width: calc(50% - 8px);
+}
+
+/* Transition content styling */
+.transition-content {
+  padding: 20px;
+  background-color: var(--color-bg-primary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.transition-content h3 {
+  margin-top: 0;
+}
+
+/* Grid utilities */
+.grid {
+  display: grid;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Margin utilities */
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .tab-buttons {
+    flex-direction: column;
+  }
+  
+  .tab-button {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .grid-cols-2, .grid-cols-3 {
+    grid-template-columns: 1fr;
+  }
+  
+  .timing-item {
+    width: 100%;
+  }
 } 
