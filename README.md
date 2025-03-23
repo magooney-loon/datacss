@@ -1,6 +1,6 @@
 # DataCSS
 
-Lightweight CSS library using data attributes for theming without JavaScript dependencies.
+Lightweight CSS library using data attributes for theming.
 
 ## Features
 
