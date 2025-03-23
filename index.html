@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DataCSS Library Demo</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/demo.css">
+</head>
+<body data-theme="light" data-style="flat">
+  <header class="page-header">
+    <div class="container">
+      <div class="logo">
+        <div class="logo-icon">D</div>
+        <span>DataCSS</span>
+      </div>
+      <div>
+        <a href="https://github.com/magooney-loon/datacss" target="_blank">GitHub</a>
+      </div>
+    </div>
+    
+  </header>
+  
+  <div class="container">
+    <p class="text-secondary mb-4">A lightweight, powerful theming system with enhanced animations and styles</p>
+    <div class="card">
+      <h2>Theme Picker</h2>
+      <p class="text-secondary">Choose a color theme for the interface.</p>
+      <div class="theme-picker">
+        <button onclick="setTheme('light')" class="active" id="light-theme-btn">Light</button>
+        <button onclick="setTheme('dark')" id="dark-theme-btn">Dark</button>
+        <button onclick="setTheme('nightowl')" id="nightowl-theme-btn">Night Owl</button>
+        <button onclick="setTheme('terminal')" id="terminal-theme-btn">Terminal</button>
+        <button onclick="setTheme('claude')" id="claude-theme-btn">Claude</button>
+        <button onclick="setTheme('synthwave')" id="synthwave-theme-btn">Synthwave</button>
+      </div>
+      
+      <div class="divider"></div>
+      
+      <h3>Theme Color Palettes</h3>
+      <div class="color-palettes">
+        <div class="palette-group">
+          <h4>Backgrounds</h4>
+          <div class="color-swatch">
+            <div class="color-sample primary-bg" title="Primary Background"></div>
+            <div class="color-sample secondary-bg" title="Secondary Background"></div>
+            <div class="color-sample tertiary-bg" title="Tertiary Background"></div>
+          </div>
+        </div>
+        
+        <div class="palette-group">
+          <h4>Accents</h4>
+          <div class="color-swatch">
+            <div class="color-sample accent-dark" title="Accent Dark"></div>
+            <div class="color-sample accent-color" title="Accent"></div>
+            <div class="color-sample accent-light" title="Accent Light"></div>
+          </div>
+        </div>
+        
+        <div class="palette-group">
+          <h4>Status</h4>
+          <div class="color-swatch">
+            <div class="color-sample success-color" title="Success"></div>
+            <div class="color-sample warning-color" title="Warning"></div>
+            <div class="color-sample error-color" title="Error"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-4 text-center">
+        <span class="text-secondary">Active theme: </span>
+        <span class="accent-color" id="active-theme-display">light</span>
+      </div>
+    </div>
+    
+    <div class="card mt-4">
+      <h2>Style Picker</h2>
+      <p class="text-secondary">Choose a visual style for the interface components.</p>
+      <div class="style-picker">
+        <button onclick="setStyle('flat')" class="active" id="flat-style-btn">Flat</button>
+        <button onclick="setStyle('material')" id="material-style-btn">Material</button>
+        <button onclick="setStyle('skeumorph')" id="skeumorph-style-btn">Skeumorph</button>
+        <button onclick="setStyle('futura')" id="futura-style-btn">Futura</button>
+        <button onclick="setStyle('neomorphic')" id="neomorphic-style-btn">Neomorphic</button>
+        <button onclick="setStyle('glitch')" id="glitch-style-btn">Glitch</button>
+      </div>
+      
+      <div class="divider"></div>
+      
+      <h3>Style Features</h3>
+      <div class="style-features">
+        <div class="feature">
+          <span class="feature-title">Typography</span>
+          <div>Heading weight: <span class="text-tertiary">var(--heading-font-weight)</span></div>
+          <div>Letter spacing: <span class="text-tertiary">var(--heading-letter-spacing)</span></div>
+        </div>
+        
+        <div class="feature">
+          <span class="feature-title">Shapes</span>
+          <div>Border radius: <span class="text-tertiary">var(--border-radius)</span></div>
+          <div>Border style: <span class="text-tertiary">var(--card-border-style)</span></div>
+        </div>
+        
+        <div class="feature">
+          <span class="feature-title">Effects</span>
+          <div>Box shadow: <span class="text-tertiary">var(--box-shadow)</span></div>
+          <div>Transition: <span class="text-tertiary">var(--transition-speed)</span></div>
+        </div>
+      </div>
+      
+      <div class="divider"></div>
+      
+      <h3>Animation Demo</h3>
+      <p class="text-secondary mb-2">Hover over these elements to see style-specific animations</p>
+      <div class="animation-demo">
+        <div class="hover-example">Hover Me</div>
+      </div>
+
+      <div class="code-example">
+        <pre><code>&lt;body data-theme="<span class="accent-color" id="code-theme">light</span>" data-style="<span class="success-color" id="code-style">flat</span>"&gt;
+  &lt;!-- Your content here --&gt;
+&lt;/body&gt;</code></pre>
+      </div>
+      
+      <div class="mt-4 text-center">
+        <span class="text-secondary">Active style: </span>
+        <span class="success-color" id="active-style-display">flat</span>
+      </div>
+    </div>
+    
+    <div class="sample-elements">
+      <div class="card">
+        <h3>UI Elements</h3>
+        <p class="text-secondary">This card shows various UI elements with the selected theme and style.</p>
+        
+        <div class="sample-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="Enter your name">
+          
+          <label for="email">Email:</label>
+          <input type="email" id="email" placeholder="Enter your email">
+          
+          <label for="message">Message:</label>
+          <textarea id="message" rows="3" placeholder="Type your message here"></textarea>
+          
+          <div class="mt-2 grid grid-cols-3 gap-2">
+            <button type="submit">Submit</button>
+            <button class="success">Success</button>
+            <button class="warning">Warning</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <h3>Text Elements</h3>
+        <p>This card demonstrates text styling, links and status colors.</p>
+        
+        <div class="mb-2">
+          <span class="success">Success text</span> • 
+          <span class="warning">Warning text</span> • 
+          <span class="error">Error text</span>
+        </div>
+        
+        <p class="mb-2">
+          This is a <a href="#">sample link</a> that demonstrates the hover effect. 
+          Links are styled differently based on the selected style variant.
+        </p>
+        
+        <ul>
+          <li>List items also receive style-specific treatments</li>
+          <li>Notice how the bullet style changes</li>
+          <li>The spacing is also adjusted per style</li>
+        </ul>
+        
+        <div class="mt-4">
+          <h4>Text Styles</h4>
+          <p class="text-primary">Primary text - Used for main content</p>
+          <p class="text-secondary">Secondary text - Used for descriptions and less important content</p>
+          <p class="text-tertiary">Tertiary text - Used for hints and additional information</p>
+        </div>
+      </div>
+      
+      <div class="card">
+        <h3>Status Buttons</h3>
+        <p class="text-secondary">Buttons with different status styles and hover effects.</p>
+        
+        <div class="grid grid-cols-2 gap-4 mt-4">
+          <button>Default Button</button>
+          <button class="error">Error Button</button>
+          
+          <div>
+            <hr class="divider">
+            <p class="text-tertiary text-sm mt-1">
+              Dividers also adapt to the style
+            </p>
+          </div>
+          
+          <div class="text-center">
+            <code>code element</code>
+            <p class="text-tertiary text-sm mt-1">
+              Code blocks match the theme
+            </p>
+          </div>
+          
+          <button class="success">Success Button</button>
+          <button class="warning">Warning Button</button>
+        </div>
+      </div>
+      
+      <div class="card">
+        <h3>Component Interactions</h3>
+        <p class="text-secondary">Interactive elements and how they respond to user input.</p>
+        
+        <div class="grid grid-cols-2 gap-4 mt-4">
+          <div>
+            <label for="toggle-demo">Toggle:</label>
+            <input type="checkbox" id="toggle-demo" checked>
+          </div>
+          
+          <div>
+            <label for="radio-demo">Radio:</label>
+            <div>
+              <input type="radio" id="radio1" name="radio-demo" checked>
+              <label for="radio1" class="text-sm">Option 1</label>
+            </div>
+            <div>
+              <input type="radio" id="radio2" name="radio-demo">
+              <label for="radio2" class="text-sm">Option 2</label>
+            </div>
+          </div>
+          
+          <div>
+            <label for="select-demo">Select:</label>
+            <select id="select-demo">
+              <option>Option 1</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+          </div>
+          
+          <div>
+            <label for="range-demo">Range:</label>
+            <input type="range" id="range-demo" min="0" max="100" value="50">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="page-footer">
+    <div class="container">
+      <p class="footer-text">DataCSS Library - A versatile CSS framework for beautiful, themeable interfaces</p>
+      <p class="footer-text mt-1">Created with ❤️ by TEAM-JOINT</p>
+    </div>
+  </footer>
+
+  <script>
+    // Enhanced theme and style switching with persisted preferences
+    function setTheme(theme) {
+      document.body.setAttribute('data-theme', theme);
+      
+      // Update active state for theme buttons
+      document.querySelectorAll('.theme-picker button').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      document.getElementById(`${theme}-theme-btn`).classList.add('active');
+      
+      // Update code example and active theme display
+      document.getElementById('code-theme').textContent = theme;
+      document.getElementById('active-theme-display').textContent = theme;
+      
+      // Save preference
+      localStorage.setItem('preferred-theme', theme);
+    }
+    
+    function setStyle(style) {
+      document.body.setAttribute('data-style', style);
+      
+      // Update active state for style buttons
+      document.querySelectorAll('.style-picker button').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      document.getElementById(`${style}-style-btn`).classList.add('active');
+      
+      // Update code example and active style display
+      document.getElementById('code-style').textContent = style;
+      document.getElementById('active-style-display').textContent = style;
+      
+      // Save preference
+      localStorage.setItem('preferred-style', style);
+      
+      // Special handling for glitch style - add data-text attributes for the glitch effect
+      if (style === 'glitch') {
+        document.querySelectorAll('.card, button, a').forEach(el => {
+          // For text elements, use their text content
+          if (el.textContent.trim() !== '') {
+            el.setAttribute('data-text', el.textContent);
+          }
+          // For elements with children but no direct text, use their inner HTML
+          else if (el.innerHTML.trim() !== '') {
+            el.setAttribute('data-text', el.innerHTML);
+          }
+        });
+      } else {
+        // Remove data-text attributes when not using glitch style
+        document.querySelectorAll('[data-text]').forEach(el => {
+          el.removeAttribute('data-text');
+        });
+      }
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize with saved preferences or defaults
+      const savedTheme = localStorage.getItem('preferred-theme') || 'light';
+      const savedStyle = localStorage.getItem('preferred-style') || 'flat';
+      
+      setTheme(savedTheme);
+      setStyle(savedStyle);
+    });
+  </script>
+</body>
+</html> 

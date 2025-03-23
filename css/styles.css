@@ -1,0 +1,866 @@
+/* Style Variations */
+
+/* Flat Style - Minimal and clean with subtle interactions */
+[data-style="flat"] {
+  /* Base properties */
+  --border-radius: 2px;
+  --button-padding: 8px 16px;
+  --transition-speed: 0.2s;
+  --box-shadow: none;
+  --border-width: 1px;
+  --input-bg: var(--color-bg-tertiary);
+  --card-padding: 16px;
+  
+  /* Interactive effects */
+  --button-hover-transform: scale(1.02);
+  --focus-ring: 0 0 0 2px var(--color-accent);
+  --card-hover-transform: translateY(-2px);
+  --input-focus-transform: none;
+  
+  /* Spacing and layout */
+  --element-spacing: 16px;
+  --section-spacing: 32px;
+  --container-padding: 24px;
+  --header-padding: 12px 16px;
+  
+  /* Typography */
+  --button-text-transform: none;
+  --heading-font-weight: 600;
+  --button-font-weight: 500;
+  --heading-letter-spacing: normal;
+  --text-line-height: 1.5;
+  --heading-line-height: 1.2;
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+  /* Visual design */
+  --card-bg-image: none;
+  --button-bg-image: none;
+  --card-border-style: solid;
+  --input-border-style: solid;
+  --button-border-style: solid;
+  
+  /* Animations */
+  --card-hover-effect: none;
+  --button-hover-effect: opacity;
+  --button-active-transform: scale(0.98);
+  --card-transition: transform 0.2s ease, box-shadow 0.2s ease;
+  --input-transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  --link-transition: color 0.2s ease;
+  --link-hover-effect: underline;
+  --link-decoration-thickness: 1px;
+  --link-decoration-style: solid;
+  
+  /* Additional effects */
+  --image-filter: none;
+  --icon-size: 20px;
+  --backdrop-blur: 0px;
+  --list-bullet-style: disc;
+  --input-placeholder-opacity: 0.6;
+  --button-text-shadow: none;
+  --toggle-duration: 0.2s;
+  --toggle-size: 20px;
+  --divider-style: solid;
+  --tooltip-bg: var(--color-bg-secondary);
+  --tooltip-padding: 6px 10px;
+  
+  /* Distinctive flat style characteristics */
+  --card-overlay-opacity: 0;
+  --element-overlay-opacity: 0;
+  --focus-transition: box-shadow 0.2s ease;
+  --hover-lift: translateY(-2px);
+  
+  /* Typography */
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --heading-font-weight: 600;
+  --heading-letter-spacing: -0.02em;
+  --text-rendering: optimizeLegibility;
+  
+  /* Shape properties */
+  --border-radius: 6px;
+  --border-width: 1px;
+  --card-border-style: solid;
+  --button-border-style: solid;
+  --input-border-style: solid;
+  
+  /* Effects and depth */
+  --box-shadow: 0 1px 3px var(--color-shadow);
+  --card-shadow: 0 2px 4px var(--color-shadow);
+  --button-shadow: 0 1px 2px var(--color-shadow);
+  --button-shadow-hover: 0 4px 8px var(--color-shadow-hover);
+  --input-shadow: inset 0 1px 2px var(--color-shadow);
+  
+  /* Animation properties */
+  --transition-speed: 200ms;
+  --transition-timing: ease-out;
+  --button-transition: all var(--transition-speed) var(--transition-timing);
+  --input-transition: all var(--transition-speed) var(--transition-timing);
+  --card-transition: all var(--transition-speed) var(--transition-timing);
+  
+  /* Focus states */
+  --focus-ring-color: var(--color-focus);
+  --focus-ring-style: 0 0 0 3px var(--focus-ring-color);
+  
+  /* Link styling */
+  --link-decoration: underline;
+  --link-decoration-thickness: 1px;
+  --link-decoration-style: solid;
+  --link-decoration-offset: 2px;
+  
+  /* Code blocks */
+  --code-bg: var(--color-code-bg);
+  --code-color: var(--color-code-text);
+  --code-padding: 0.2em 0.4em;
+  --code-border-radius: 4px;
+  
+  /* List styling */
+  --list-marker-color: var(--color-accent);
+  --list-padding: 0 0 0 1.25em;
+  --list-gap: 0.5em;
+  
+  /* Input control variables */
+  --checkbox-border-radius: 3px;
+  --range-track-height: 6px;
+  --range-thumb-size: 16px;
+}
+
+/* Material Style - Elevation-based design with smooth animations */
+[data-style="material"] {
+  /* Base properties */
+  --border-radius: 4px;
+  --button-padding: 10px 16px;
+  --transition-speed: 0.3s;
+  --box-shadow: 0 2px 5px var(--color-shadow);
+  --border-width: 0;
+  --input-bg: var(--color-bg-secondary);
+  --card-padding: 16px;
+  
+  /* Interactive effects */
+  --button-hover-transform: translateY(-2px);
+  --focus-ring: 0 0 0 2px var(--color-accent);
+  --card-hover-transform: translateY(-4px);
+  --input-focus-transform: translateY(-1px);
+  
+  /* Spacing and layout */
+  --element-spacing: 24px;
+  --section-spacing: 48px;
+  --container-padding: 24px;
+  --header-padding: 16px 24px;
+  
+  /* Typography */
+  --button-text-transform: none;
+  --heading-font-weight: 500;
+  --button-font-weight: 500;
+  --heading-letter-spacing: normal;
+  --text-line-height: 1.6;
+  --heading-line-height: 1.3;
+  --font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+  /* Visual design */
+  --card-bg-image: none;
+  --button-bg-image: var(--gradient-primary);
+  --card-border-style: none;
+  --input-border-style: solid;
+  --button-border-style: none;
+  
+  /* Animations */
+  --card-hover-effect: shadow;
+  --button-hover-effect: shadow;
+  --button-active-transform: scale(0.97);
+  --card-transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+  --input-transition: all 0.3s ease;
+  --link-transition: color 0.3s ease;
+  --link-hover-effect: ripple;
+  --link-decoration-thickness: 2px;
+  --link-decoration-style: solid;
+  
+  /* Additional effects */
+  --image-filter: drop-shadow(0 2px 4px var(--color-shadow));
+  --icon-size: 24px;
+  --backdrop-blur: 0px;
+  --list-bullet-style: circle;
+  --input-placeholder-opacity: 0.5;
+  --button-text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  --toggle-duration: 0.3s;
+  --toggle-size: 22px;
+  --divider-style: solid;
+  --tooltip-bg: var(--color-bg-secondary);
+  --tooltip-padding: 8px 12px;
+  
+  /* Distinctive material style characteristics */
+  --card-overlay-opacity: 0.05;
+  --element-overlay-opacity: 0.1;
+  --focus-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --hover-lift: translateY(-4px);
+  
+  /* Typography */
+  --font-family: Roboto, "Segoe UI", Helvetica, Arial, sans-serif;
+  --heading-font-weight: 500;
+  --heading-letter-spacing: 0;
+  --text-rendering: optimizeLegibility;
+  
+  /* Shape properties */
+  --border-radius: 8px;
+  --border-width: 0px;
+  --card-border-style: none;
+  --button-border-style: none;
+  --input-border-style: solid;
+  
+  /* Effects and depth */
+  --box-shadow: 0 2px 5px var(--color-shadow);
+  --card-shadow: 0 4px 12px var(--color-shadow);
+  --button-shadow: 0 2px 5px var(--color-shadow);
+  --button-shadow-hover: 0 8px 15px var(--color-shadow-hover);
+  --input-shadow: none;
+  
+  /* Animation properties */
+  --transition-speed: 250ms;
+  --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
+  --button-transition: all var(--transition-speed) var(--transition-timing);
+  --input-transition: all var(--transition-speed) var(--transition-timing);
+  --card-transition: all var(--transition-speed) var(--transition-timing);
+  
+  /* Focus states */
+  --focus-ring-color: var(--color-focus);
+  --focus-ring-style: 0 0 0 2px var(--focus-ring-color);
+  
+  /* Link styling */
+  --link-decoration: none;
+  --link-decoration-thickness: 0px;
+  --link-decoration-style: none;
+  --link-decoration-offset: 0px;
+  
+  /* Code blocks */
+  --code-bg: var(--color-code-bg);
+  --code-color: var(--color-code-text);
+  --code-padding: 0.2em 0.5em;
+  --code-border-radius: 4px;
+  
+  /* List styling */
+  --list-marker-color: var(--color-accent);
+  --list-padding: 0 0 0 1.5em;
+  --list-gap: 0.75em;
+  
+  /* Button specific */
+  --button-text-transform: uppercase;
+  --button-font-weight: 500;
+  --button-padding: 0.6em 1.2em;
+  
+  /* Form elements */
+  --input-bg: var(--color-bg-secondary);
+  --input-padding: 0.75em 1em;
+  
+  /* Animation keyframes */
+  --anim-bounce-scale: 1.08;
+  --anim-hover-y: -5px;
+  --anim-press-scale: 0.92;
+  
+  /* Background patterns */
+  --bg-noise-opacity: 0.02;
+  --bg-grid-size: 0;
+  --bg-dot-size: 0;
+  
+  /* Input control variables */
+  --checkbox-border-radius: 2px;
+  --range-track-height: 4px;
+  --range-thumb-size: 18px;
+}
+
+/* Skeumorph Style - 3D-like tactile design with realistic effects */
+[data-style="skeumorph"] {
+  /* Base properties */
+  --border-radius: 6px;
+  --button-padding: 12px 20px;
+  --transition-speed: 0.2s;
+  --box-shadow: 0 2px 4px var(--color-shadow), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  --border-width: 1px;
+  --input-bg: linear-gradient(to bottom, var(--color-bg-secondary) 0%, var(--color-bg-tertiary) 100%);
+  --card-padding: 20px;
+  
+  /* Interactive effects */
+  --button-hover-transform: translateY(1px);
+  --focus-ring: 0 0 0 3px rgba(var(--color-accent-rgb), 0.4);
+  --card-hover-transform: none;
+  --input-focus-transform: none;
+  
+  /* Spacing and layout */
+  --element-spacing: 20px;
+  --section-spacing: 40px;
+  --container-padding: 28px;
+  --header-padding: 16px 20px;
+  
+  /* Typography */
+  --button-text-transform: none;
+  --heading-font-weight: 700;
+  --button-font-weight: 600;
+  --heading-letter-spacing: -0.02em;
+  --text-line-height: 1.5;
+  --heading-line-height: 1.25;
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Visual design */
+  --card-bg-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.05));
+  --button-bg-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.1));
+  --card-border-style: solid;
+  --input-border-style: solid;
+  --button-border-style: solid;
+  
+  /* Animations */
+  --card-hover-effect: lighting;
+  --button-hover-effect: lighting;
+  --button-active-transform: translateY(2px);
+  --card-transition: box-shadow 0.2s ease;
+  --input-transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  --link-transition: color 0.2s ease;
+  --link-hover-effect: highlight;
+  --link-decoration-thickness: 1px;
+  --link-decoration-style: dotted;
+  
+  /* Additional effects */
+  --image-filter: drop-shadow(0 1px 2px var(--color-shadow));
+  --icon-size: 20px;
+  --backdrop-blur: 0px;
+  --list-bullet-style: square;
+  --input-placeholder-opacity: 0.55;
+  --button-text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+  --toggle-duration: 0.15s;
+  --toggle-size: 22px;
+  --divider-style: groove;
+  --tooltip-bg: var(--color-bg-primary);
+  --tooltip-padding: 8px 12px;
+  
+  /* Distinctive skeuomorph characteristics */
+  --card-overlay-opacity: 0.03;
+  --element-overlay-opacity: 0.15;
+  --focus-transition: box-shadow 0.2s ease;
+  --hover-lift: none;
+  
+  /* Typography */
+  --font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --heading-font-weight: 700;
+  --heading-letter-spacing: -0.03em;
+  --text-rendering: optimizeLegibility;
+  
+  /* Shape properties */
+  --border-radius: 10px;
+  --border-width: 1px;
+  --card-border-style: solid;
+  --button-border-style: solid;
+  --input-border-style: solid;
+  
+  /* Effects and depth */
+  --box-shadow: 0 1px 3px var(--color-shadow), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  --card-shadow: 0 10px 20px var(--color-shadow), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  --button-shadow: 0 2px 4px var(--color-shadow), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  --button-shadow-hover: 0 15px 25px var(--color-shadow-hover), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  --input-shadow: inset 0 2px 4px var(--color-shadow);
+  
+  /* Animation properties */
+  --transition-speed: 300ms;
+  --transition-timing: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --button-transition: all var(--transition-speed) var(--transition-timing);
+  --input-transition: all var(--transition-speed) var(--transition-timing);
+  --card-transition: all var(--transition-speed) var(--transition-timing);
+  
+  /* Focus states */
+  --focus-ring-color: var(--color-focus);
+  --focus-ring-style: 0 0 0 4px var(--focus-ring-color);
+  
+  /* Link styling */
+  --link-decoration: none;
+  --link-decoration-thickness: 0px;
+  --link-decoration-style: none;
+  --link-decoration-offset: 0px;
+  
+  /* Code blocks */
+  --code-bg: var(--color-code-bg);
+  --code-color: var(--color-code-text);
+  --code-padding: 0.2em 0.5em;
+  --code-border-radius: 6px;
+  
+  /* List styling */
+  --list-marker-color: var(--color-accent);
+  --list-padding: 0 0 0 1.75em;
+  --list-gap: 0.85em;
+  
+  /* Button specific */
+  --button-text-transform: none;
+  --button-font-weight: 700;
+  --button-padding: 0.75em 1.5em;
+  
+  /* Form elements */
+  --input-bg: var(--color-bg-secondary);
+  --input-padding: 0.75em 1em;
+  
+  /* Animation keyframes */
+  --anim-bounce-scale: 1.1;
+  --anim-hover-y: -8px;
+  --anim-press-scale: 0.9;
+  
+  /* Background patterns */
+  --bg-noise-opacity: 0.05;
+  --bg-grid-size: 0;
+  --bg-dot-size: 0;
+  
+  /* Input control variables */
+  --checkbox-border-radius: 4px;
+  --range-track-height: 8px;
+  --range-thumb-size: 20px;
+}
+
+/* Futura Style - Bold, geometric with sharp edges */
+[data-style="futura"] {
+  /* Base properties */
+  --border-radius: 0;
+  --button-padding: 12px 24px;
+  --transition-speed: 0.15s;
+  --box-shadow: 0 4px 0 var(--color-shadow);
+  --border-width: 2px;
+  --input-bg: var(--color-bg-tertiary);
+  --card-padding: 24px;
+  
+  /* Interactive effects */
+  --button-hover-transform: translateY(2px);
+  --focus-ring: 0 0 0 2px var(--color-bg-primary), 0 0 0 4px var(--color-accent);
+  --card-hover-transform: translateX(4px);
+  --input-focus-transform: none;
+  
+  /* Spacing and layout */
+  --element-spacing: 32px;
+  --section-spacing: 64px;
+  --container-padding: 32px;
+  --header-padding: 20px 32px;
+  
+  /* Typography */
+  --button-text-transform: uppercase;
+  --heading-font-weight: 800;
+  --button-font-weight: 700;
+  --heading-letter-spacing: 0.05em;
+  --text-line-height: 1.6;
+  --heading-line-height: 1.1;
+  --font-family: 'Montserrat', 'Arial Black', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  
+  /* Visual design */
+  --card-bg-image: none;
+  --button-bg-image: none;
+  --card-border-style: solid;
+  --input-border-style: solid;
+  --button-border-style: solid;
+  
+  /* Animations */
+  --card-hover-effect: shift;
+  --button-hover-effect: shift;
+  --button-active-transform: translateY(4px);
+  --card-transition: transform 0.15s cubic-bezier(0.5, 1.5, 0.5, 1), box-shadow 0.15s ease;
+  --input-transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  --link-transition: color 0.15s ease, box-shadow 0.15s ease;
+  --link-hover-effect: box;
+  --link-decoration-thickness: 2px;
+  --link-decoration-style: dashed;
+  
+  /* Additional effects */
+  --image-filter: contrast(1.05);
+  --icon-size: 24px;
+  --backdrop-blur: 0px;
+  --list-bullet-style: none;
+  --input-placeholder-opacity: 0.5;
+  --button-text-shadow: none;
+  --toggle-duration: 0.1s;
+  --toggle-size: 24px;
+  --divider-style: dashed;
+  --tooltip-bg: var(--color-accent);
+  --tooltip-padding: 10px 16px;
+  
+  /* Distinctive futuristic characteristics */
+  --card-overlay-opacity: 0;
+  --element-overlay-opacity: 0;
+  --focus-transition: box-shadow 0.15s ease;
+  --hover-lift: translateX(4px);
+  
+  /* Typography */
+  --font-family: "Futura", "Century Gothic", Helvetica, Arial, sans-serif;
+  --heading-font-weight: 600;
+  --heading-letter-spacing: 0.05em;
+  --text-rendering: geometricPrecision;
+  
+  /* Shape properties */
+  --border-radius: 0px;
+  --border-width: 2px;
+  --card-border-style: solid;
+  --button-border-style: solid;
+  --input-border-style: solid;
+  
+  /* Effects and depth */
+  --box-shadow: none;
+  --card-shadow: 5px 5px 0px var(--color-shadow);
+  --button-shadow: 3px 3px 0px var(--color-shadow);
+  --button-shadow-hover: 5px 5px 0px var(--color-shadow-hover);
+  --input-shadow: inset 2px 2px 0px var(--color-shadow);
+  
+  /* Animation properties */
+  --transition-speed: 150ms;
+  --transition-timing: ease;
+  --button-transition: all var(--transition-speed) var(--transition-timing);
+  --input-transition: all var(--transition-speed) var(--transition-timing);
+  --card-transition: all var(--transition-speed) var(--transition-timing);
+  
+  /* Focus states */
+  --focus-ring-color: var(--color-focus);
+  --focus-ring-style: 0 0 0 2px var(--focus-ring-color);
+  
+  /* Link styling */
+  --link-decoration: underline;
+  --link-decoration-thickness: 2px;
+  --link-decoration-style: solid;
+  --link-decoration-offset: 2px;
+  
+  /* Code blocks */
+  --code-bg: var(--color-code-bg);
+  --code-color: var(--color-code-text);
+  --code-padding: 0.2em 0.5em;
+  --code-border-radius: 0px;
+  
+  /* List styling */
+  --list-marker-color: var(--color-accent);
+  --list-padding: 0 0 0 1.5em;
+  --list-gap: 0.6em;
+  
+  /* Button specific */
+  --button-text-transform: uppercase;
+  --button-font-weight: 600;
+  --button-padding: 0.65em 1.3em;
+  
+  /* Form elements */
+  --input-bg: var(--color-bg-secondary);
+  --input-padding: 0.6em 1em;
+  
+  /* Animation keyframes */
+  --anim-bounce-scale: 1.03;
+  --anim-hover-y: 0px;
+  --anim-press-scale: 0.97;
+  
+  /* Background patterns */
+  --bg-noise-opacity: 0;
+  --bg-grid-size: 20px;
+  --bg-dot-size: 0;
+  
+  /* Input control variables */
+  --checkbox-border-radius: 0px;
+  --range-track-height: 4px;
+  --range-thumb-size: 16px;
+}
+
+/* Neomorphic Style - Soft UI with subtle shadows and highlights */
+[data-style="neomorphic"] {
+  /* Base properties */
+  --border-radius: 12px;
+  --button-padding: 10px 20px;
+  --transition-speed: 0.25s;
+  --box-shadow: 6px 6px 12px var(--color-shadow), -6px -6px 12px rgba(255, 255, 255, 0.8);
+  --border-width: 0;
+  --input-bg: var(--color-bg-primary);
+  --card-padding: 20px;
+  
+  /* Interactive effects */
+  --button-hover-transform: scale(1.02);
+  --focus-ring: inset 2px 2px 4px var(--color-shadow), inset -2px -2px 4px rgba(255, 255, 255, 0.8);
+  --card-hover-transform: scale(1.01);
+  --input-focus-transform: none;
+  
+  /* Spacing and layout */
+  --element-spacing: 20px;
+  --section-spacing: 40px;
+  --container-padding: 25px;
+  --header-padding: 15px 20px;
+  
+  /* Typography */
+  --button-text-transform: none;
+  --heading-font-weight: 600;
+  --button-font-weight: 600;
+  --heading-letter-spacing: -0.01em;
+  --text-line-height: 1.6;
+  --heading-line-height: 1.3;
+  --font-family: 'SF Pro Display', 'SF Pro Text', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  
+  /* Visual design */
+  --card-bg-image: none;
+  --button-bg-image: none;
+  --card-border-style: none;
+  --input-border-style: none;
+  --button-border-style: none;
+  
+  /* Animations */
+  --card-hover-effect: shadow;
+  --button-hover-effect: shadow;
+  --button-active-transform: scale(0.98);
+  --card-transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --input-transition: all 0.25s ease;
+  --link-transition: all 0.25s ease;
+  --link-hover-effect: none;
+  --link-decoration-thickness: 0px;
+  --link-decoration-style: none;
+  
+  /* Additional effects */
+  --image-filter: none;
+  --icon-size: 22px;
+  --backdrop-blur: 0px;
+  --list-bullet-style: square;
+  --input-placeholder-opacity: 0.6;
+  --button-text-shadow: none;
+  --toggle-duration: 0.25s;
+  --toggle-size: 22px;
+  --divider-style: solid;
+  --tooltip-bg: var(--color-bg-secondary);
+  --tooltip-padding: 8px 12px;
+  
+  /* Distinctive neomorphic style characteristics */
+  --card-overlay-opacity: 0;
+  --element-overlay-opacity: 0;
+  --focus-transition: all 0.25s ease;
+  --hover-lift: scale(1.01);
+  
+  /* Shape properties */
+  --border-radius: 12px;
+  --border-width: 0px;
+  --card-border-style: none;
+  --button-border-style: none;
+  --input-border-style: none;
+  
+  /* Effects and depth - special neomorphic approach */
+  --box-shadow: 6px 6px 12px var(--color-shadow), -6px -6px 12px rgba(255, 255, 255, 0.8);
+  --card-shadow: 8px 8px 16px var(--color-shadow), -8px -8px 16px rgba(255, 255, 255, 0.8);
+  --button-shadow: 4px 4px 8px var(--color-shadow), -4px -4px 8px rgba(255, 255, 255, 0.8);
+  --button-shadow-hover: 6px 6px 12px var(--color-shadow), -6px -6px 12px rgba(255, 255, 255, 0.8);
+  --input-shadow: inset 2px 2px 5px var(--color-shadow), inset -2px -2px 5px rgba(255, 255, 255, 0.8);
+  
+  /* Focus states - inset shadow for pressed appearance */
+  --focus-ring-color: var(--color-focus);
+  --focus-ring-style: inset 3px 3px 6px var(--color-shadow), inset -3px -3px 6px rgba(255, 255, 255, 0.8);
+  
+  /* Link styling - subtle with no underlines */
+  --link-decoration: none;
+  --link-decoration-thickness: 0px;
+  --link-decoration-style: none;
+  --link-decoration-offset: 0px;
+  
+  /* Code blocks - with neomorphic shadow */
+  --code-bg: var(--color-bg-primary);
+  --code-color: var(--color-text-primary);
+  --code-padding: 0.3em 0.6em;
+  --code-border-radius: 8px;
+  
+  /* Button specific - with pressed state */
+  --button-active-shadow: inset 3px 3px 6px var(--color-shadow), inset -3px -3px 6px rgba(255, 255, 255, 0.8);
+  --button-font-weight: 600;
+  --button-padding: 0.7em 1.3em;
+  
+  /* Form elements - with inset neumorphic effect */
+  --input-bg: var(--color-bg-primary);
+  --input-padding: 0.8em 1.2em;
+  
+  /* Animation keyframes */
+  --anim-bounce-scale: 1.02;
+  --anim-hover-y: 0;
+  --anim-press-scale: 0.98;
+  
+  /* Input control variables */
+  --checkbox-border-radius: 8px;
+  --range-track-height: 8px;
+  --range-thumb-size: 22px;
+}
+
+/* Glitch Style - Chaotic digital distortions and artifacts */
+[data-style="glitch"] {
+  /* Base properties */
+  --border-radius: 0px;
+  --button-padding: 13px 22px;
+  --transition-speed: 0.08s;
+  --box-shadow: 3px 3px 0 rgba(var(--color-error-rgb), 0.7), -3px -3px 0 rgba(var(--color-accent-rgb), 0.7);
+  --border-width: 2px;
+  --input-bg: var(--color-bg-tertiary);
+  --card-padding: 22px;
+  
+  /* Interactive effects */
+  --button-hover-transform: skew(-5deg) translateX(3px);
+  --focus-ring: 0 0 0 2px var(--color-bg-primary), 0 0 0 4px var(--color-error), 0 0 0 6px var(--color-accent);
+  --card-hover-transform: skew(2deg) scale(1.02);
+  --input-focus-transform: translateX(-2px);
+  
+  /* Spacing and layout */
+  --element-spacing: 22px;
+  --section-spacing: 45px;
+  --container-padding: 28px;
+  --header-padding: 18px 25px;
+  
+  /* Typography */
+  --button-text-transform: uppercase;
+  --heading-font-weight: 800;
+  --button-font-weight: 700;
+  --heading-letter-spacing: -0.03em;
+  --text-line-height: 1.5;
+  --heading-line-height: 1.15;
+  --font-family: 'VT323', 'Courier New', monospace;
+  
+  /* Visual design */
+  --card-bg-image: linear-gradient(90deg, rgba(var(--color-accent-rgb), 0.05) 25%, transparent 25%), linear-gradient(180deg, rgba(var(--color-error-rgb), 0.05) 25%, transparent 25%);
+  --button-bg-image: linear-gradient(45deg, var(--color-bg-secondary) 25%, transparent 25%, transparent 50%, var(--color-bg-secondary) 50%, var(--color-bg-secondary) 75%, transparent 75%, transparent);
+  --card-border-style: double;
+  --input-border-style: dashed;
+  --button-border-style: solid;
+  
+  /* Animations */
+  --card-hover-effect: glitch;
+  --button-hover-effect: glitch;
+  --button-active-transform: skew(5deg) translateX(-3px);
+  --card-transition: all 0.08s steps(2);
+  --input-transition: all 0.08s steps(3);
+  --link-transition: all 0.08s linear;
+  --link-hover-effect: glitch;
+  --link-decoration-thickness: 3px;
+  --link-decoration-style: wavy;
+  
+  /* Additional effects */
+  --image-filter: contrast(1.1) saturate(1.2) hue-rotate(5deg);
+  --icon-size: 22px;
+  --backdrop-blur: 1px;
+  --list-bullet-style: '➤';
+  --input-placeholder-opacity: 0.7;
+  --button-text-shadow: 2px 0 0 rgba(var(--color-error-rgb), 0.5), -2px 0 0 rgba(var(--color-accent-rgb), 0.5);
+  --toggle-duration: 0.08s;
+  --toggle-size: 22px;
+  --divider-style: dotted;
+  --tooltip-bg: var(--color-error);
+  --tooltip-padding: 8px 12px;
+  
+  /* Distinctive glitch style characteristics */
+  --card-overlay-opacity: 0.05;
+  --element-overlay-opacity: 0.1;
+  --focus-transition: all 0.08s steps(3);
+  --hover-lift: skew(-2deg) translateY(-2px);
+  
+  /* Typography */
+  --font-family: "VT323", "Courier New", monospace;
+  --heading-font-weight: 800;
+  --heading-letter-spacing: -0.03em;
+  --text-rendering: optimizeSpeed;
+  
+  /* Shape properties */
+  --border-radius: 2px;
+  --border-width: 2px;
+  --card-border-style: double;
+  --button-border-style: solid;
+  --input-border-style: dashed;
+  
+  /* Effects and depth - special glitch approach */
+  --box-shadow: 2px 0 0 rgba(var(--color-error-rgb), 0.7), -2px 0 0 rgba(var(--color-accent-rgb), 0.7);
+  --card-shadow: 5px 0 0 rgba(var(--color-error-rgb), 0.5), -5px 0 0 rgba(var(--color-accent-rgb), 0.5);
+  --button-shadow: 3px 0 0 rgba(var(--color-error-rgb), 0.7), -3px 0 0 rgba(var(--color-accent-rgb), 0.7);
+  --button-shadow-hover: 6px 0 0 rgba(var(--color-error-rgb), 0.5), -6px 0 0 rgba(var(--color-accent-rgb), 0.5);
+  --input-shadow: inset 2px 0 0 rgba(var(--color-error-rgb), 0.3), inset -2px 0 0 rgba(var(--color-accent-rgb), 0.3);
+  
+  /* Focus states - chromatic aberration effect */
+  --focus-ring-color: var(--color-focus);
+  --focus-ring-style: 0 0 0 2px var(--color-bg-primary), 0 0 0 4px var(--color-error), 0 0 0 6px var(--color-accent);
+  
+  /* Link styling - glitchy with offset and aberration */
+  --link-decoration: underline;
+  --link-decoration-thickness: 2px;
+  --link-decoration-style: wavy;
+  --link-decoration-offset: 4px;
+  
+  /* Code blocks - with noise texture */
+  --code-bg: var(--color-bg-secondary);
+  --code-color: var(--color-accent);
+  --code-padding: 0.3em 0.7em;
+  --code-border-radius: 0px;
+  
+  /* Button specific - with glitch effects */
+  --button-text-transform: uppercase;
+  --button-font-weight: 700;
+  --button-padding: 0.7em 1.4em;
+  
+  /* Animation keyframes for glitch effects */
+  --anim-bounce-scale: 1.1;
+  --anim-hover-y: -3px;
+  --anim-press-scale: 0.9;
+  
+  /* Background patterns */
+  --bg-noise-opacity: 0.15;
+  --bg-grid-size: 40px;
+  --bg-dot-size: 2px;
+  
+  /* Custom properties for glitch effects */
+  --glitch-offset-1: -5px;
+  --glitch-offset-2: 5px;
+  --glitch-color-1: rgba(var(--color-error-rgb), 0.7);
+  --glitch-color-2: rgba(var(--color-accent-rgb), 0.7);
+  --scanline-size: 2px;
+  --scanline-speed: 6s;
+  
+  /* Text selection */
+  --color-selection-bg: var(--color-error);
+  --color-selection-text: var(--color-bg-primary);
+  
+  /* Input control variables */
+  --checkbox-border-radius: 0px;
+  --range-track-height: 6px;
+  --range-thumb-size: 18px;
+}
+
+/* Default Style */
+:root {
+  /* Default to flat style if no data attribute is specified */
+  --border-radius: 2px;
+  --button-padding: 8px 16px;
+  --transition-speed: 0.2s;
+  --box-shadow: none;
+  --border-width: 1px;
+  --input-bg: var(--color-bg-tertiary);
+  --card-padding: 16px;
+  --button-hover-transform: scale(1.02);
+  --focus-ring: 0 0 0 2px var(--color-accent);
+  --card-hover-transform: translateY(-2px);
+  --input-focus-transform: none;
+  --element-spacing: 16px;
+  --section-spacing: 32px;
+  --container-padding: 24px;
+  --header-padding: 12px 16px;
+  --button-text-transform: none;
+  --heading-font-weight: 600;
+  --button-font-weight: 500;
+  --heading-letter-spacing: normal;
+  --text-line-height: 1.5;
+  --heading-line-height: 1.2;
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --card-bg-image: none;
+  --button-bg-image: none;
+  --card-border-style: solid;
+  --input-border-style: solid;
+  --button-border-style: solid;
+  --card-hover-effect: none;
+  --button-hover-effect: opacity;
+  --button-active-transform: scale(0.98);
+  --card-transition: transform 0.2s ease, box-shadow 0.2s ease;
+  --input-transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  --link-transition: color 0.2s ease;
+  --link-hover-effect: underline;
+  --link-decoration-thickness: 1px;
+  --link-decoration-style: solid;
+  --image-filter: none;
+  --icon-size: 20px;
+  --backdrop-blur: 0px;
+  --list-bullet-style: disc;
+  --input-placeholder-opacity: 0.6;
+  --button-text-shadow: none;
+  --toggle-duration: 0.2s;
+  --toggle-size: 20px;
+  --divider-style: solid;
+  --tooltip-bg: var(--color-bg-secondary);
+  --tooltip-padding: 6px 10px;
+  --card-overlay-opacity: 0;
+  --element-overlay-opacity: 0;
+  --focus-transition: box-shadow 0.2s ease;
+  --hover-lift: translateY(-2px);
+  --checkbox-border-radius: 3px;
+  --range-track-height: 6px;
+  --range-thumb-size: 16px;
+} 
