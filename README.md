@@ -124,11 +124,3 @@ You can extend the library by:
 ## Browser Support
 
 Works in all modern browsers that support CSS custom properties (IE11 not supported).
-
-## License
-
-MIT
-
-## Creator
-
-Created by the team-joint project 
