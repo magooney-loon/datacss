@@ -7,6 +7,10 @@
   padding: 20px;
 }
 
+body > .container {
+  margin-top: 40px;
+}
+
 /* Page Header and Footer */
 .page-header {
   background-color: var(--color-bg-primary);
@@ -54,6 +58,17 @@
 .footer-text {
   color: var(--color-text-tertiary);
   font-size: 0.9rem;
+}
+
+.footer-text a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-text a:hover {
+  color: var(--color-accent-light);
+  text-decoration: underline;
 }
 
 /* Theme and Style pickers */
